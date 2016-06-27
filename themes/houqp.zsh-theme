@@ -46,11 +46,11 @@ if [ `which git &> /dev/null` ]; then
 	ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
 
 	PROMPT='
-%{$GREEN_BOLD%}%n @ %m: %{$BLUE_BOLD%}%~%u$(parse_git_dirty)$(git_prompt_ahead)%{$RESET_COLOR%}
+%{$GREEN_BOLD%}%n @ %(hostname -f): %{$BLUE_BOLD%}%~%u$(parse_git_dirty)$(git_prompt_ahead)%{$RESET_COLOR%}
 %{$RED_BOLD%} $%{$RESET_COLOR%} '
 else
 	PROMPT='
-%{$GREEN_BOLD%}%n @ %m: %{$BLUE_BOLD%}%~%u$%{$RESET_COLOR%}
+%{$GREEN_BOLD%}%n @ $(hostname -f): %{$BLUE_BOLD%}%~%u%{$RESET_COLOR%}
 %{$RED_BOLD%} $%{$RESET_COLOR%} '
 fi
 
