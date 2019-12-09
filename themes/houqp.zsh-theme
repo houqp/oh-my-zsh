@@ -54,6 +54,4 @@ else
 %{$RED_BOLD%} $%{$RESET_COLOR%} '
 fi
 
-RPROMPT='%{$GREY_BOLD%}git:%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$RESET_COLOR%}'
-
-
+RPROMPT=''
